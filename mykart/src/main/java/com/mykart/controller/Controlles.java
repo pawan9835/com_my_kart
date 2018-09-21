@@ -15,6 +15,7 @@ public class Controlles {
 	@Autowired
 	private IProductService productServ;
 
+	//test method for displaying view page
 	@RequestMapping(value = "/hi")
 	public ModelAndView welcome(ModelMap map) {
 
