@@ -24,6 +24,14 @@ public class Controlles {
 		m.setViewName("welcome");
 		return m;
 	}
+	
+	//added a test test method 
+	@RequestMapping(value = "/test")
+	public String testController() {
+		
+		
+		return "Welcome";
+	}
 @RequestMapping(value = "/add")
 	public ModelAndView addProduct(@ModelAttribute Products prd) {
 
