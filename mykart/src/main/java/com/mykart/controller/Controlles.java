@@ -25,7 +25,7 @@ public class Controlles {
 		return m;
 	}
 	
-	//added a test test method 
+	//added a test test method   
 	@RequestMapping(value = "/test")
 	public String testController() {
 		
