@@ -28,7 +28,7 @@ public class Controlles {
 	//added a test test method   
 	@RequestMapping(value = "/test")
 	public String testController() {
-		
+		System.out.println("Welcome to java");
 		
 		return "Welcome";
 	}
