@@ -11,6 +11,8 @@ public class Products {
 	@Id
 	private int productID;
 	private String productName;
+	private String product_description;
+	private String product_categorie;
 	private String productType;
 	private int productQuantity;
 	private double productPrice;

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mykart.model.Products;
@@ -21,7 +22,7 @@ public class Controlles {
 
 		ModelAndView m = new ModelAndView();
 
-		m.setViewName("welcome");
+		m.setViewName("addproduct");
 		return m;
 	}
 	
@@ -30,16 +31,17 @@ public class Controlles {
 	public String testController() {
 		System.out.println("Welcome to java");
 		
-		return "Welcome";
+		return "addproduct";
 	}
-@RequestMapping(value = "/add")
+@RequestMapping(value = "/add" ,method = RequestMethod.POST)
 	public ModelAndView addProduct(@ModelAttribute Products prd) {
 
-		prd.setProductID(666);
+	System.out.println("Actioned Performed :) ");
+		/*prd.setProductID(11);
 		prd.setProductName("Laptop");
 		prd.setProductPrice(45000);
 		prd.setProductQuantity(1);
-		prd.setProductType("Electronics");
+		prd.setProductType("Electronics");*/
 
 		
 		int id = productServ.addProduct(prd);
@@ -48,7 +50,7 @@ public class Controlles {
 
 		ModelAndView m = new ModelAndView();
 
-		m.setViewName("welcome");
+		m.setViewName("addproduct");
 		return m;
 	}
 }
